@@ -9,6 +9,9 @@ Note: edit includes/config.h to customize for your system.
 In particular, _PATH_DHCPD_DB
 Edit the toplevel Makefile to set the install PREFIX.
 
+This builds on amd64 machines, might work on i386 machines (not tested).
+To build on arm devices see notes below.
+
 to build:
 # make
 
@@ -20,6 +23,23 @@ to install:
 
 to deinstall:
 # make deinstall
+
+
+BUILDING ON ARM
+
+to build:
+# make -f Makefile.arm
+ 
+to clean:
+# make -f Makefile.arm clean
+ 
+to install:
+# make -f Makefile.arm install 
+
+to deinstall:
+# make -f Makefile.arm deinstall
+
+
 
 
 

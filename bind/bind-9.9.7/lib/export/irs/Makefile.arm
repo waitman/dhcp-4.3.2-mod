@@ -1,0 +1,24 @@
+all: irs
+
+irs:
+	$(CC)  -I../../../ -I. -I./include -I../../../lib/irs/include -I ../../irs/include -I../../..//lib/isccfg/include -I../../../lib/isccfg/include -I../dns/include -I../../..//lib/dns/include -I../../../lib/dns/include -I../dns/include -I../../..//lib/dns/include -I../../../lib/dns/include -I../../../lib/export/isc/include -I../../..//lib/isc/include -I../../../lib/isc -I../../../lib/isc/include -I../../../lib/isc/unix/include -I../../../lib/isc/nothreads/include -I../../../lib/isc/noatomic/include     -g -O0  -W -Wall -Wmissing-prototypes -Wcast-qual -Wwrite-strings -Wformat -Wpointer-arith -fno-strict-aliasing  -c ../../../lib/irs/context.c
+	$(CC)  -I../../../ -I. -I./include -I../../../lib/irs/include -I ../../irs/include -I../../..//lib/isccfg/include -I../../../lib/isccfg/include -I../dns/include -I../../..//lib/dns/include -I../../../lib/dns/include -I../dns/include -I../../..//lib/dns/include -I../../../lib/dns/include -I../../../lib/export/isc/include -I../../..//lib/isc/include -I../../../lib/isc -I../../../lib/isc/include -I../../../lib/isc/unix/include -I../../../lib/isc/nothreads/include -I../../../lib/isc/noatomic/include     -g -O0  -W -Wall -Wmissing-prototypes -Wcast-qual -Wwrite-strings -Wformat -Wpointer-arith -fno-strict-aliasing  -c ../../../lib/irs/dnsconf.c
+	$(CC)  -I../../../ -I. -I./include -I../../../lib/irs/include -I ../../irs/include -I../../..//lib/isccfg/include -I../../../lib/isccfg/include -I../dns/include -I../../..//lib/dns/include -I../../../lib/dns/include -I../dns/include -I../../..//lib/dns/include -I../../../lib/dns/include -I../../../lib/export/isc/include -I../../..//lib/isc/include -I../../../lib/isc -I../../../lib/isc/include -I../../../lib/isc/unix/include -I../../../lib/isc/nothreads/include -I../../../lib/isc/noatomic/include     -g -O0  -W -Wall -Wmissing-prototypes -Wcast-qual -Wwrite-strings -Wformat -Wpointer-arith -fno-strict-aliasing  -c ../../../lib/irs/gai_strerror.c
+	$(CC)  -I../../../ -I. -I./include -I../../../lib/irs/include -I ../../irs/include -I../../..//lib/isccfg/include -I../../../lib/isccfg/include -I../dns/include -I../../..//lib/dns/include -I../../../lib/dns/include -I../dns/include -I../../..//lib/dns/include -I../../../lib/dns/include -I../../../lib/export/isc/include -I../../..//lib/isc/include -I../../../lib/isc -I../../../lib/isc/include -I../../../lib/isc/unix/include -I../../../lib/isc/nothreads/include -I../../../lib/isc/noatomic/include     -g -O0  -W -Wall -Wmissing-prototypes -Wcast-qual -Wwrite-strings -Wformat -Wpointer-arith -fno-strict-aliasing  -c ../../../lib/irs/getaddrinfo.c
+	$(CC)  -I../../../ -I. -I./include -I../../../lib/irs/include -I ../../irs/include -I../../..//lib/isccfg/include -I../../../lib/isccfg/include -I../dns/include -I../../..//lib/dns/include -I../../../lib/dns/include -I../dns/include -I../../..//lib/dns/include -I../../../lib/dns/include -I../../../lib/export/isc/include -I../../..//lib/isc/include -I../../../lib/isc -I../../../lib/isc/include -I../../../lib/isc/unix/include -I../../../lib/isc/nothreads/include -I../../../lib/isc/noatomic/include     -g -O0  -W -Wall -Wmissing-prototypes -Wcast-qual -Wwrite-strings -Wformat -Wpointer-arith -fno-strict-aliasing  -c ../../../lib/irs/getnameinfo.c
+	$(CC)  -I../../../ -I. -I./include -I../../../lib/irs/include -I ../../irs/include -I../../..//lib/isccfg/include -I../../../lib/isccfg/include -I../dns/include -I../../..//lib/dns/include -I../../../lib/dns/include -I../dns/include -I../../..//lib/dns/include -I../../../lib/dns/include -I../../../lib/export/isc/include -I../../..//lib/isc/include -I../../../lib/isc -I../../../lib/isc/include -I../../../lib/isc/unix/include -I../../../lib/isc/nothreads/include -I../../../lib/isc/noatomic/include     -g -O0  -W -Wall -Wmissing-prototypes -Wcast-qual -Wwrite-strings -Wformat -Wpointer-arith -fno-strict-aliasing  -c ../../../lib/irs/resconf.c
+	$(CC)  -I../../../ -I. -I./include -I../../../lib/irs/include -I ../../irs/include -I../../..//lib/isccfg/include -I../../../lib/isccfg/include -I../dns/include -I../../..//lib/dns/include -I../../../lib/dns/include -I../dns/include -I../../..//lib/dns/include -I../../../lib/dns/include -I../../../lib/export/isc/include -I../../..//lib/isc/include -I../../../lib/isc -I../../../lib/isc/include -I../../../lib/isc/unix/include -I../../../lib/isc/nothreads/include -I../../../lib/isc/noatomic/include     -g -O0  -W -Wall -Wmissing-prototypes -Wcast-qual -Wwrite-strings -Wformat -Wpointer-arith -fno-strict-aliasing  \
+		-DVERSION=\"9.9.7\" \
+		-DLIBINTERFACE=91 \
+		-DLIBREVISION=1 \
+		-DLIBAGE=0 \
+		-c ../../../lib/irs/version.c
+	$(AR) cruv libirs.a context.o dnsconf.o gai_strerror.o getaddrinfo.o getnameinfo.o resconf.o version.o
+	$(RANLIB) libirs.a
+	touch timestamp
+
+clean:
+	rm -f timestamp
+	rm -f *.a
+	rm -f *.o
+
