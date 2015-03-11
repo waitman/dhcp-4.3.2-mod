@@ -40,6 +40,7 @@ dhcpd:
 	$(CC)  -g -O0  -Wall -Werror -fno-strict-aliasing -I../bind/include   -o dhcpd dhcpd-dhcpd.o dhcpd-dhcp.o dhcpd-bootp.o dhcpd-confpars.o dhcpd-db.o dhcpd-class.o dhcpd-failover.o dhcpd-omapi.o dhcpd-mdb.o dhcpd-stables.o dhcpd-salloc.o dhcpd-ddns.o dhcpd-dhcpleasequery.o dhcpd-dhcpv6.o dhcpd-mdb6.o dhcpd-ldap.o dhcpd-ldap_casa.o ../common/libdhcp.a ../omapip/libomapi.a ../dhcpctl/libdhcpctl.a ../bind/lib/libirs.a ../bind/lib/libdns.a ../bind/lib/libisccfg.a ../bind/lib/libisc.a 
 
 clean:
+	rm -f dhcpd
 	rm -Rf .deps
 	rm -f *.o
 	rm -f *.a
