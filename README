@@ -1,0 +1,59 @@
+
+This is ISC dhcp-4.3.2 modified by Waitman Gobble <ns@waitman.net>
+
+It was modified to build on FreeBSD 11.0-Current using clang and BSD make.
+(Without dependency on GNU autotools and GNU make.)
+
+
+Note: edit includes/config.h to customize for your system.
+In particular, _PATH_DHCPD_DB
+Edit the toplevel Makefile to set the install PREFIX.
+
+to build:
+# make
+
+to clean:
+# make clean
+
+to install:
+# make install
+
+to deinstall:
+# make deinstall
+
+
+
+Installed programs:
+
+$(PREFIX)/sbin/dhcpd
+$(PREFIX)/sbin/dhclient
+$(PREFIX)/bin/dhcrelay
+
+Examples:
+
+$(PREFIX)/share/examples/dhcpd/dhclient.conf.example
+$(PREFIX)/share/examples/dhcpd/dhclient-start-script
+$(PREFIX)/share/examples/dhcpd/dhcpd.conf.example
+
+Manual Pages:
+
+$(PREFIX)/man/man5/dhcpd.conf.5.gz
+$(PREFIX)/man/man8/dhcpd.8.gz
+$(PREFIX)/man/man5/dhcpd.leases.5.gz
+$(PREFIX)/man/man5/dhcp-eval.5.gz
+$(PREFIX)/man/man5/dhcp-options.5.gz
+$(PREFIX)/man/man8/dhclient-script.8.gz
+$(PREFIX)/man/man5/dhclient.leases.5.gz
+$(PREFIX)/man/man5/dhclient.conf.5.gz
+$(PREFIX)/man/man8/dhcrelay.8.gz
+
+
+This version does not install the API, libraries or headers, however they are built in the source directory. 
+See omapip, includes, and other directory paths for more information.
+
+
+READ LICENSE, README.ISC, and RELNOTES
+
+
+
+
