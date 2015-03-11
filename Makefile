@@ -2,6 +2,10 @@ PREFIX=		/usr/cust
 INSTALL=	/usr/bin/install
 
 all: 
+        rm -Rf bind/lib
+	rm -Rf bind/includes
+	mkdir -p bind/lib
+	cp -a bind/includes-amd64 bind/includes
 	@(echo "Making all in bind")
 	@(cd bind/bind-9.9.7/lib/export && make)
 	@(echo "Making all in common")
