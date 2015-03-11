@@ -1,6 +1,7 @@
 all: export
 
 export:
+	cp ../isc/include/isc/platform.h.arm ../isc/include/isc/platform.h
 	@(echo "Making isc/unix")
 	@(cd isc/unix && make -f Makefile.arm)
 	@(echo "Making isc/nls")

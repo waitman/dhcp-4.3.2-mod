@@ -1,6 +1,7 @@
 all: export
 
 export:
+	cp ../isc/include/isc/platform.h.amd64 ../isc/include/isc/platform.h
 	@(echo "Making isc/unix")
 	@(cd isc/unix && make)
 	@(echo "Making isc/nls")
