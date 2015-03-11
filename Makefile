@@ -44,26 +44,28 @@ clean:
 install:
 	mkdir -p $(PREFIX)/man/man8
 	mkdir -p $(PREFIX)/man/man5
+	mkdir -p $(PREFIX)/sbin
+	mkdir -p $(PREFIX)/bin
 	@(echo "Installing dhcpd server")
-	$(INSTALL) -s -m 0755 -o root -g wheel server/dhcpd $(PREFIX)/sbin
-	$(INSTALL) -m 0644 -o root -g wheel server/dhcpd.conf.5.gz $(PREFIX)/man/man5
-	$(INSTALL) -m 0644 -o root -g wheel server/dhcpd.8.gz $(PREFIX)/man/man8
-	$(INSTALL) -m 0644 -o root -g wheel server/dhcpd.leases.5.gz $(PREFIX)/man/man5
+	$(INSTALL) -s -m 0755 -o root -g wheel server/dhcpd $(PREFIX)/sbin/
+	$(INSTALL) -m 0644 -o root -g wheel server/dhcpd.conf.5.gz $(PREFIX)/man/man5/
+	$(INSTALL) -m 0644 -o root -g wheel server/dhcpd.8.gz $(PREFIX)/man/man8/
+	$(INSTALL) -m 0644 -o root -g wheel server/dhcpd.leases.5.gz $(PREFIX)/man/man5/
 	mkdir -p $(PREFIX)/share/examples/dhcpd
-	cp server/dhcpd.conf.example $(PREFIX)/share/examples/dhcpd
-	$(INSTALL) -m 0644 -o root -g wheel common/dhcp-eval.5.gz $(PREFIX)/man/man5
-	$(INSTALL) -m 0644 -o root -g wheel common/dhcp-options.5.gz $(PREFIX)/man/man5
+	cp server/dhcpd.conf.example $(PREFIX)/share/examples/dhcpd/
+	$(INSTALL) -m 0644 -o root -g wheel common/dhcp-eval.5.gz $(PREFIX)/man/man5/
+	$(INSTALL) -m 0644 -o root -g wheel common/dhcp-options.5.gz $(PREFIX)/man/man5/
 	@(echo "Installing dhclient")
-	$(INSTALL) -s -m 0755 -o root -g wheel client/dhclient $(PREFIX)/sbin
-	$(INSTALL) -m 0644 -o root -g wheel client/dhclient-script.8.gz $(PREFIX)/man/man8
-	$(INSTALL) -m 0644 -o root -g wheel client/dhclient.leases.5.gz $(PREFIX)/man/man5
-	$(INSTALL) -m 0644 -o root -g wheel client/dhclient.conf.5.gz $(PREFIX)/man/man5
-	$(INSTALL) -m 0644 -o root -g wheel client/dhclient.conf.example $(PREFIX)/share/examples/dhcpd
-	$(INSTALL) -m 0644 -o root -g wheel client/scripts/freebsd $(PREFIX)/share/examples/dhcpd
+	$(INSTALL) -s -m 0755 -o root -g wheel client/dhclient $(PREFIX)/sbin/
+	$(INSTALL) -m 0644 -o root -g wheel client/dhclient-script.8.gz $(PREFIX)/man/man8/
+	$(INSTALL) -m 0644 -o root -g wheel client/dhclient.leases.5.gz $(PREFIX)/man/man5/
+	$(INSTALL) -m 0644 -o root -g wheel client/dhclient.conf.5.gz $(PREFIX)/man/man5/
+	$(INSTALL) -m 0644 -o root -g wheel client/dhclient.conf.example $(PREFIX)/share/examples/dhcpd/
+	$(INSTALL) -m 0644 -o root -g wheel client/scripts/freebsd $(PREFIX)/share/examples/dhcpd/
 	mv $(PREFIX)/share/examples/dhcpd/freebsd $(PREFIX)/share/examples/dhcpd/dhclient-start-script
 	@(echo "Installing dhcrelay")
-	$(INSTALL) -s -m 0755 -o root -g wheel relay/dhcrelay $(PREFIX)/bin
-	$(INSTALL) -m 0644 -o root -g wheel relay/dhcrelay.8.gz $(PREFIX)/man/man8
+	$(INSTALL) -s -m 0755 -o root -g wheel relay/dhcrelay $(PREFIX)/bin/
+	$(INSTALL) -m 0644 -o root -g wheel relay/dhcrelay.8.gz $(PREFIX)/man/man8/
 
 deinstall:
 	@(echo "Deinstalling dhcpd, dhclient and dhcrelay")
