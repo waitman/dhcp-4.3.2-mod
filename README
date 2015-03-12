@@ -48,6 +48,7 @@ Installed programs:
 $(PREFIX)/sbin/dhcpd
 $(PREFIX)/sbin/dhclient
 $(PREFIX)/bin/dhcrelay
+$(PREFIX)/bin/omshell
 
 Examples:
 

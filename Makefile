@@ -48,6 +48,7 @@ install:
 	mkdir -p $(PREFIX)/bin
 	@(echo "Installing dhcpd server")
 	$(INSTALL) -s -m 0755 -o root -g wheel server/dhcpd $(PREFIX)/sbin/
+	$(INSTALL) -s -m 0755 -o root -g wheel dhcpctl/omshell $(PREFIX)/bin/
 	$(INSTALL) -m 0644 -o root -g wheel server/dhcpd.conf.5.gz $(PREFIX)/man/man5/
 	$(INSTALL) -m 0644 -o root -g wheel server/dhcpd.8.gz $(PREFIX)/man/man8/
 	$(INSTALL) -m 0644 -o root -g wheel server/dhcpd.leases.5.gz $(PREFIX)/man/man5/
@@ -70,6 +71,7 @@ install:
 deinstall:
 	@(echo "Deinstalling dhcpd, dhclient and dhcrelay")
 	rm -f $(PREFIX)/sbin/dhcpd
+	rm -f $(PREFIX)/bin/omshell
 	rm -f $(PREFIX)/sbin/dhclient
 	rm -f $(PREFIX)/bin/dhcrelay
 	@(echo "Deinstalling examples")
