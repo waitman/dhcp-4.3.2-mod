@@ -2,7 +2,7 @@ PREFIX=		/usr/cust
 INSTALL=	/usr/bin/install
 
 all: 
-        rm -Rf bind/lib
+	rm -Rf bind/lib
 	rm -Rf bind/include
 	mkdir -p bind/lib
 	cp -a bind/include-amd64 bind/include
