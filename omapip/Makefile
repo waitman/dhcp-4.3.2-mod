@@ -53,6 +53,7 @@ omapip:
 	$(CC)  -g -O0  -Wall -Werror -fno-strict-aliasing -I../bind/include   -o svtest test.o libomapi.a ../bind/lib/libirs.a ../bind/lib/libdns.a ../bind/lib/libisccfg.a ../bind/lib/libisc.a
 
 clean:
+	rm -f svtest
 	rm -Rf .deps
 	rm -f *.o
 	rm -f *.a

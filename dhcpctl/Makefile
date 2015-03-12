@@ -20,6 +20,8 @@ dhcpctl:
 	$(CC)  -g -O0  -Wall -Werror -fno-strict-aliasing -I../bind/include   -o cltest cltest.o libdhcpctl.a ../common/libdhcp.a ../omapip/libomapi.a ../bind/lib/libirs.a ../bind/lib/libdns.a ../bind/lib/libisccfg.a ../bind/lib/libisc.a 
 
 clean:
+	rm -f cltest
+	rm -f omshell
 	rm -Rf .deps
 	rm -f *.o
 	rm -f *.a
