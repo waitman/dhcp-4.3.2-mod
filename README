@@ -22,6 +22,9 @@ to clean:
 to install:
 # make install
 
+Note: make install will strip binaries, if you need debug symbols use the binaries
+built in client/dhclient and server/dhcpd
+
 to deinstall:
 # make deinstall
 
