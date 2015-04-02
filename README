@@ -8,6 +8,7 @@ It was modified to build on FreeBSD 11.0-Current using clang and BSD make.
 Note: edit includes/config.h to customize for your system.
 In particular, _PATH_DHCPD_DB
 Edit the toplevel Makefile to set the install PREFIX.
+edit client/Makefile, CLIENT_PATH='"PATH=/usr/cust/sbin:/sbin:/bin:/usr/sbin:/usr/bin"' 
 
 This builds on amd64 machines, might work on i386 machines (not tested).
 To build on arm devices see notes below.
