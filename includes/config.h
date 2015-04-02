@@ -156,7 +156,7 @@
 /* #undef USE_LOG_PID */
 
 /* Define to 1 to use the standard BSD socket API. */
-#define USE_SOCKETS 1
+/* #undef USE_SOCKETS 1 */
 
 /* Enable extensions on AIX 3, Interix.  */
 #ifndef _ALL_SOURCE

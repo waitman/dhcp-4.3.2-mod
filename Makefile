@@ -25,6 +25,7 @@ all:
 
 clean:
 	@(echo "Cleaning bind")
+	rm -f bind/lib/*.a
 	@(cd bind/bind-9.9.7/lib/export && make clean)
 	@(echo "Cleaning common")
 	@(cd common && make clean)
