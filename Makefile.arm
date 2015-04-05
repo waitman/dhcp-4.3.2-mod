@@ -5,7 +5,7 @@ all:
 	rm -Rf bind/lib
 	rm -Rf bind/include
 	mkdir -p bind/lib
-        cp -a bind/include-arm bind/include
+	cp -a bind/include-arm bind/include
 	@(echo "Making all in bind")
 	@(cd bind/bind-9.9.7/lib/export && make -f Makefile.arm)
 	@(echo "Making all in common")
